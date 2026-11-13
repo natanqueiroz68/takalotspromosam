@@ -171,7 +171,7 @@ function renderOrderPlainText(order) {
     `- Delivery Method: Courier`,
     ``,
     `ITEMS IN THIS ORDER:`,
-    `- 1x Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) - R 799.00`,
+    `- 1x Samsung Galaxy A56 5G 256GB Dual Sim - R 799.00`,
     ``,
     `PAYMENT SUMMARY:`,
     `- Subtotal: R 799.00`,
@@ -484,7 +484,7 @@ async function handler(req, res) {
   const productName  = item.title || item.name || item.productName || item.product_title
                     || (payload.product && payload.product.name)
                     || payload.productTitle || payload.product_title
-                    || 'Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)';
+                    || 'Samsung Galaxy A56 5G 256GB Dual Sim';
   const productPrice = item.totalPrice != null
                     ? item.totalPrice
                     : (item.price != null ? item.price : (payload.amount != null ? payload.amount : 799));

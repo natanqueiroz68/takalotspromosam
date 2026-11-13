@@ -130,7 +130,7 @@ function renderOrderPlainText(order) {
     `- Delivery Method: Courier`,
     ``,
     `ITEMS IN THIS ORDER:`,
-    `- 1x Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) - R 799.00`,
+    `- 1x Samsung Galaxy A56 5G 256GB Dual Sim - R 799.00`,
     ``,
     `PAYMENT SUMMARY:`,
     `- Subtotal: R 799.00`,
@@ -230,7 +230,7 @@ function publicView(order) {
   const dates = computeOrderDates(order.received_date, order.delivery_date);
   return {
     order_id:                order.order_id,
-    product_name:            order.product_name || 'Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)',
+    product_name:            order.product_name || 'Samsung Galaxy A56 5G 256GB Dual Sim',
     product_price:           order.product_price || 799,
     currency:                order.currency || 'ZAR',
     product_image:           order.product_image || 'https://takalotspromosam.vercel.app/images/galaxy-a56-graphite-main.png',
@@ -379,7 +379,7 @@ module.exports = async function handler(req, res) {
         customer_email: (req.query.to || req.query.email || '').trim(),
         customer_phone: '',
         product_id: 'dm-sieeuvg3m1',
-        product_name: 'Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)',
+        product_name: 'Samsung Galaxy A56 5G 256GB Dual Sim',
         product_price: 799,
         currency: 'ZAR',
         product_image: 'https://takalotspromosam.vercel.app/images/galaxy-a56-graphite-main.png',

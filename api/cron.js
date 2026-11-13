@@ -205,7 +205,7 @@ const STAGES = {
     headline: 'Your Order Has Been Delivered',
     paragraphs: (id) => [
       `Your Takealot order <strong>${id}</strong> has been successfully delivered!`,
-      `We hope you enjoy your new Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import).`,
+      `We hope you enjoy your new Samsung Galaxy A56 5G 256GB Dual Sim.`,
       `If you have any questions or feedback about your delivery, our support team is always here to assist.`,
     ],
   },
@@ -294,7 +294,7 @@ function renderStagePlainText(order, stageInfo, pDate, dDate) {
     `- Order Date: ${orderDateShort}`,
     `- Estimated Delivery Date: ${deliveryDateLong}`,
     `- Delivery Method: Courier`,
-    `- Item: 1x Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) - R 799.00`,
+    `- Item: 1x Samsung Galaxy A56 5G 256GB Dual Sim - R 799.00`,
     `- Total Paid: R 799.00`,
     ``,
     `Need help? Visit https://takalotspromosam.vercel.app`,
