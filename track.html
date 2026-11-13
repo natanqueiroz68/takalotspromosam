@@ -444,13 +444,14 @@
       margin: 18px 0 16px;
     }
 
-    /* ===== PICKUP / DELIVERY POINT ===== */
-    .pickup-section {
+    /* ===== DELIVERY ADDRESS ===== */
+    .delivery-address-section {
       background: #ffffff;
+      padding-top: 2px;
     }
 
-    .pickup-heading {
-      font-size: 12.5px;
+    .delivery-heading {
+      font-size: 12px;
       font-weight: 700;
       color: #9aa3af;
       letter-spacing: 0.5px;
@@ -458,21 +459,21 @@
       margin-bottom: 8px;
     }
 
-    .pickup-name {
-      font-size: 14px;
+    .delivery-type {
+      font-size: 14.5px;
       font-weight: 700;
-      color: #1f2937;
+      color: #111827;
       margin-bottom: 3px;
     }
 
-    .pickup-address {
-      font-size: 13px;
-      color: #6b7280;
+    .delivery-address-text {
+      font-size: 13.5px;
+      color: #4b5563;
       line-height: 1.4;
       margin-bottom: 4px;
     }
 
-    .pickup-hours {
+    .delivery-sub {
       font-size: 12px;
       color: #9ca3af;
     }
@@ -725,11 +726,11 @@
       <div class="summary-dashed-line"></div>
 
       <!-- DELIVERY ADDRESS -->
-      <div class="pickup-section" id="deliveryDetailsSection">
-        <div class="pickup-heading" id="deliveryHeading">DELIVERY ADDRESS</div>
-        <div class="pickup-name" id="deliveryRecipient">Standard Delivery</div>
-        <div class="pickup-address" id="deliveryAddress">Cape Town, Western Cape, 8001</div>
-        <div class="pickup-hours" id="deliveryHours">Courier Delivery &bull; Weekdays 08:00 - 17:00</div>
+      <div class="delivery-address-section" id="deliveryDetailsSection">
+        <div class="delivery-heading" id="deliveryHeading">DELIVERY ADDRESS</div>
+        <div class="delivery-type" id="deliveryType">Standard Delivery</div>
+        <div class="delivery-address-text" id="deliveryAddressText">Your Home - Your Address</div>
+        <div class="delivery-sub" id="deliveryHours">Courier Delivery &bull; Weekdays 08:00 - 17:00</div>
       </div>
     </section>
 
@@ -984,13 +985,13 @@
               if (delivEl) delivEl.textContent = order.delivery_date_formatted || fmtShort(delDate);
 
               // Delivery details
-              if (order.customer_name) {
-                var recEl = document.getElementById('deliveryRecipient');
-                if (recEl) recEl.textContent = order.customer_name;
-              }
-              if (order.delivery_address) {
-                var addrEl = document.getElementById('deliveryAddress');
-                if (addrEl) addrEl.textContent = order.delivery_address;
+              var addrEl = document.getElementById('deliveryAddressText');
+              if (addrEl) {
+                if (order.delivery_address && order.delivery_address.trim() && order.delivery_address !== 'Standard Delivery') {
+                  addrEl.textContent = 'Your Home - ' + order.delivery_address;
+                } else {
+                  addrEl.textContent = 'Your Home - Your Address';
+                }
               }
 
               updateStatusBadge(order.status);
@@ -1030,6 +1031,9 @@
         if (paidEl) paidEl.textContent = cachedOrderFmt ? cachedOrderFmt.toUpperCase() : fmtShortUpper(now);
         var delivEl = document.getElementById('trackDeliveryDate');
         if (delivEl) delivEl.textContent = cachedDelivFmt || fmtShort(delDate);
+
+        var addrEl = document.getElementById('deliveryAddressText');
+        if (addrEl) addrEl.textContent = 'Your Home - Your Address';
 
         updateStatusBadge('PROCESSING');
       } catch(e) {
