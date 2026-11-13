@@ -203,7 +203,7 @@ const STAGES = {
     headline: 'Your Order Has Been Delivered',
     paragraphs: (id) => [
       `Your Takealot order <strong>${id}</strong> has been successfully delivered!`,
-      `We hope you enjoy your new JBL PartyBox 520 Portable Battery-Powered Party Speaker - Black With 2 JBL Wireless Microphones.`,
+      `We hope you enjoy your new Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import).`,
       `If you have any questions or feedback about your delivery, our support team is always here to assist.`,
     ],
   },
@@ -271,7 +271,7 @@ function renderStagePlainText(order, stageInfo, pDate, dDate) {
   const orderNumber = order.order_id;
   const orderDateShort = formatOrderDateShort(pDate);
   const deliveryDateLong = formatDeliveryDateLong(dDate);
-  const trackUrl = `https://takelaotpromo.vercel.app/track.html?order=${encodeURIComponent(orderNumber)}`;
+  const trackUrl = `https://takalotspromosam.vercel.app/track.html?order=${encodeURIComponent(orderNumber)}`;
 
   const paragraphs = stageInfo.paragraphs(orderNumber, deliveryDateLong)
     .map((p) => p.replace(/<[^>]+>/g, ''));
@@ -292,10 +292,10 @@ function renderStagePlainText(order, stageInfo, pDate, dDate) {
     `- Order Date: ${orderDateShort}`,
     `- Estimated Delivery Date: ${deliveryDateLong}`,
     `- Delivery Method: Courier`,
-    `- Item: 1x JBL PartyBox 520 Portable Battery-Powered Party Speaker - Black With 2 JBL Wireless Microphones - R 799.00`,
+    `- Item: 1x Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) - R 799.00`,
     `- Total Paid: R 799.00`,
     ``,
-    `Need help? Visit https://takelaotpromo.vercel.app`,
+    `Need help? Visit https://takalotspromosam.vercel.app`,
     ``,
     `Regards,`,
     `The Takealot Team`,

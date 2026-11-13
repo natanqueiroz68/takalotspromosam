@@ -106,7 +106,7 @@ function renderOrderPlainText(order) {
   const deliveryDateLong = order.delivery_date_long || dates.delivery_date_long;
   const customerName = order.customer_name || 'Customer';
   const orderNumber = order.order_id;
-  const trackUrl = `https://takelaotpromo.vercel.app/track.html?order=${encodeURIComponent(orderNumber)}`;
+  const trackUrl = `https://takalotspromosam.vercel.app/track.html?order=${encodeURIComponent(orderNumber)}`;
 
   return [
     `TAKEALOT PAYMENT CONFIRMATION`,
@@ -128,7 +128,7 @@ function renderOrderPlainText(order) {
     `- Delivery Method: Courier`,
     ``,
     `ITEMS IN THIS ORDER:`,
-    `- 1x JBL PartyBox 520 Portable Battery-Powered Party Speaker - Black With 2 JBL Wireless Microphones - R 799.00`,
+    `- 1x Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) - R 799.00`,
     ``,
     `PAYMENT SUMMARY:`,
     `- Subtotal: R 799.00`,
@@ -138,7 +138,7 @@ function renderOrderPlainText(order) {
     `TRACK YOUR ORDER:`,
     `${trackUrl}`,
     ``,
-    `Need help? Find answers at https://takelaotpromo.vercel.app`,
+    `Need help? Find answers at https://takalotspromosam.vercel.app`,
     ``,
     `Regards,`,
     `The Takealot Team`,
@@ -228,17 +228,17 @@ function publicView(order) {
   const dates = computeOrderDates(order.received_date, order.delivery_date);
   return {
     order_id:                order.order_id,
-    product_name:            order.product_name || 'JBL PartyBox 520 Portable Battery-Powered Party Speaker - Black With 2 JBL Wireless Microphones',
+    product_name:            order.product_name || 'Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)',
     product_price:           order.product_price || 799,
     currency:                order.currency || 'ZAR',
-    product_image:           order.product_image || 'https://takelaotpromo.vercel.app/images/jbl-partybox-520-main.png',
+    product_image:           order.product_image || 'https://takalotspromosam.vercel.app/images/galaxy-a56-graphite-main.png',
     received_date:           dates.received_date,
     delivery_date:           dates.delivery_date,
     order_date_upper:        dates.order_date_upper,
     order_date_formatted:    order.order_date_formatted || dates.order_date_formatted,
     delivery_date_formatted: order.delivery_date_formatted || dates.delivery_date_formatted,
     delivery_date_long:      order.delivery_date_long || dates.delivery_date_long,
-    tracking_url:            order.tracking_url || (`https://takelaotpromo.vercel.app/track.html?order=` + encodeURIComponent(order.order_id)),
+    tracking_url:            order.tracking_url || (`https://takalotspromosam.vercel.app/track.html?order=` + encodeURIComponent(order.order_id)),
     status:                  order.status || 'PROCESSING',
     status_history: (order.status_history || []).map(function(e) {
       return { status: e.status, timestamp: e.timestamp };
@@ -377,17 +377,17 @@ module.exports = async function handler(req, res) {
         customer_email: (req.query.to || req.query.email || '').trim(),
         customer_phone: '',
         product_id: 'dm-sieeuvg3m1',
-        product_name: 'JBL PartyBox 520 Portable Battery-Powered Party Speaker - Black With 2 JBL Wireless Microphones',
+        product_name: 'Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)',
         product_price: 799,
         currency: 'ZAR',
-        product_image: 'https://takelaotpromo.vercel.app/images/jbl-partybox-520-main.png',
+        product_image: 'https://takalotspromosam.vercel.app/images/galaxy-a56-graphite-main.png',
         received_date: purchaseIso,
         delivery_date: deliveryIso,
         order_date_formatted: dates.order_date_formatted,
         delivery_date_formatted: dates.delivery_date_formatted,
         delivery_date_long: dates.delivery_date_long,
         delivery_date_iso: dates.delivery_date_iso,
-        tracking_url: 'https://takelaotpromo.vercel.app/track.html?order=' + encodeURIComponent(orderId),
+        tracking_url: 'https://takalotspromosam.vercel.app/track.html?order=' + encodeURIComponent(orderId),
         status: calculatedStatus,
         status_history: [
           { status: 'RECEIVED', timestamp: purchaseIso },

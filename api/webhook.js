@@ -7,7 +7,7 @@
 //   UPSTASH_REDIS_REST_TOKEN  Upstash REST token
 //   WEBHOOK_SECRET            signing secret from paw-house.shop webhook settings
 //   PRODUCT_IMAGE_DEFAULT     fallback product image URL
-//   PRODUCT_IMAGE_DM_FWYYAOOHEE   image URL for the JBL PartyBox 520 product
+//   PRODUCT_IMAGE_DM_FWYYAOOHEE   image URL for the Samsung Galaxy A56 5G product
 //
 // Paw House sends:  X-Paw-House-Signature: <hmac-sha256-hex>
 // Signature is computed by Paw House as:  HMAC-SHA256(rawBody, signingSecret)
@@ -147,7 +147,7 @@ function renderOrderPlainText(order) {
   const customerName = order.customer_name || 'Customer';
   const orderNumber = order.order_id;
   const variant = 'Premium Black';
-  const trackUrl = `https://takelaotpromo.vercel.app/track.html?order=${orderNumber}`;
+  const trackUrl = `https://takalotspromosam.vercel.app/track.html?order=${orderNumber}`;
 
   return [
     `TAKEALOT PAYMENT CONFIRMATION`,
@@ -169,7 +169,7 @@ function renderOrderPlainText(order) {
     `- Delivery Method: Courier`,
     ``,
     `ITEMS IN THIS ORDER:`,
-    `- 1x JBL PartyBox 520 Portable Battery-Powered Party Speaker - Black With 2 JBL Wireless Microphones - R 799.00`,
+    `- 1x Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) - R 799.00`,
     ``,
     `PAYMENT SUMMARY:`,
     `- Subtotal: R 799.00`,
@@ -179,7 +179,7 @@ function renderOrderPlainText(order) {
     `TRACK YOUR ORDER:`,
     `${trackUrl}`,
     ``,
-    `Need help? Find answers at https://takelaotpromo.vercel.app`,
+    `Need help? Find answers at https://takalotspromosam.vercel.app`,
     ``,
     `Regards,`,
     `The Takealot Team`,
@@ -482,7 +482,7 @@ async function handler(req, res) {
   const productName  = item.title || item.name || item.productName || item.product_title
                     || (payload.product && payload.product.name)
                     || payload.productTitle || payload.product_title
-                    || 'JBL PartyBox 520 Portable Battery-Powered Party Speaker - Black With 2 JBL Wireless Microphones';
+                    || 'Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)';
   const productPrice = item.totalPrice != null
                     ? item.totalPrice
                     : (item.price != null ? item.price : (payload.amount != null ? payload.amount : 799));
@@ -538,7 +538,7 @@ async function handler(req, res) {
     delivery_date_long:      (existing && existing.delivery_date_long) || dates.delivery_date_long,
     delivery_date_iso:       (existing && existing.delivery_date_iso) || dates.delivery_date_iso,
     // Tracking URL: dynamic with real ID
-    tracking_url:   'https://takelaotpromo.vercel.app/track.html?order=' + encodeURIComponent(orderId),
+    tracking_url:   'https://takalotspromosam.vercel.app/track.html?order=' + encodeURIComponent(orderId),
     // Status
     status: (existing && existing.status) || 'PROCESSING',
     status_history: (existing && existing.status_history) || [
