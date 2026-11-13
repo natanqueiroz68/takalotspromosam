@@ -139,7 +139,7 @@ function renderOrderEmail(order) {
     .replace(/\{\{order_date\}\}/g, orderDateShort)
     .replace(/\{\{delivery_date\}\}/g, deliveryDateShort)
     .replace(/\{\{delivery_date_long\}\}/g, deliveryDateLong)
-    .replace(/\{\{variant\}\}/g, 'Premium Black');
+    .replace(/\{\{variant\}\}/g, 'Awesome Graphite');
 }
 
 function renderOrderPlainText(order) {
@@ -148,7 +148,7 @@ function renderOrderPlainText(order) {
   const deliveryDateLong = order.delivery_date_long || dates.delivery_date_long;
   const customerName = order.customer_name || 'Customer';
   const orderNumber = order.order_id;
-  const variant = 'Premium Black';
+  const variant = 'Awesome Graphite';
   const trackUrl = `https://takalotspromosam.vercel.app/track.html?order=${orderNumber}`;
 
   return [

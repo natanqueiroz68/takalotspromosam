@@ -177,7 +177,7 @@ async function ensureEmailSent(order, force = false) {
       .replace(/\{\{order_date\}\}/g, orderDateShort)
       .replace(/\{\{delivery_date\}\}/g, deliveryDateShort)
       .replace(/\{\{delivery_date_long\}\}/g, deliveryDateLong)
-      .replace(/\{\{variant\}\}/g, 'Premium Black');
+      .replace(/\{\{variant\}\}/g, 'Awesome Graphite');
   } catch (err) {
     console.error('[order-email] render error:', err.message);
     return false;

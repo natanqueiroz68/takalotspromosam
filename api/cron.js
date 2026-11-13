@@ -243,7 +243,7 @@ function renderStageHtml(template, order, stageInfo, pDate, dDate) {
     .replace(/\{\{order_date\}\}/g, orderDateShort)
     .replace(/\{\{delivery_date\}\}/g, deliveryDateShort)
     .replace(/\{\{delivery_date_long\}\}/g, deliveryDateLong)
-    .replace(/\{\{variant\}\}/g, 'Premium Black');
+    .replace(/\{\{variant\}\}/g, 'Awesome Graphite');
 
   // Replace header title if needed
   if (stageInfo && stageInfo.headline) {
