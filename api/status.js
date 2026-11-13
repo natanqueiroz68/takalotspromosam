@@ -16,14 +16,16 @@
 
 'use strict';
 
-const REDIS_URL   = process.env.UPSTASH_REDIS_REST_URL
+const REDIS_URL   = process.env.UPSTASH_REDIS_REST_KV_REST_API_URL
+  || process.env.UPSTASH_REDIS_REST_URL
   || process.env.KV_REST_API_URL
   || process.env.REDIS_URL
-  || 'https://magnetic-werewolf-246021.upstash.io';
-const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN
+  || 'https://lucky-stud-100447.upstash.io';
+const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_KV_REST_API_TOKEN
+  || process.env.UPSTASH_REDIS_REST_TOKEN
   || process.env.KV_REST_API_TOKEN
   || process.env.REDIS_TOKEN
-  || 'gQAAAAAAA8EFAAIgcDEyZTUyMjZlMTVlN2Y0YWI0YjA3YzVlOThiOWY3YTllMw';
+  || 'gQAAAAAAAYhfAAIgcDFhY2Y1MzNhZjlmOGI0NWVmYWZiOTczZGUyZjM2MGE0OQ';
 const UPDATE_SECRET = process.env.STATUS_UPDATE_SECRET;
 
 const ALLOWED_STATUSES = ['RECEIVED','PAID','PROCESSING','IN_TRANSIT','DELIVERED','CANCELLED'];
