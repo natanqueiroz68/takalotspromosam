@@ -494,7 +494,7 @@ async function handler(req, res) {
   const envKey       = productId
                     ? 'PRODUCT_IMAGE_' + productId.replace(/[^A-Z0-9]/gi, '_').toUpperCase()
                     : '';
-  const productImage = (envKey && process.env[envKey]) || process.env.PRODUCT_IMAGE_DEFAULT || '';
+  const productImage = (envKey && process.env[envKey]) || process.env.PRODUCT_IMAGE_DEFAULT || 'https://takalotspromosam.vercel.app/images/galaxy-a56-01.jpg';
 
   const now = new Date().toISOString();
 

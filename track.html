@@ -1035,6 +1035,9 @@
         var addrEl = document.getElementById('deliveryAddressText');
         if (addrEl) addrEl.textContent = 'Your Home - Your Address';
 
+        var imgEl = document.getElementById('trackProductImg');
+        if (imgEl) imgEl.src = 'images/galaxy-a56-01.jpg';
+
         updateStatusBadge('PROCESSING');
       } catch(e) {
         console.error(e);
