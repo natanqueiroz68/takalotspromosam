@@ -378,7 +378,7 @@ module.exports = async function handler(req, res) {
         customer_name: (req.query.name || 'Customer').trim(),
         customer_email: (req.query.to || req.query.email || '').trim(),
         customer_phone: '',
-        product_id: 'dm-sieeuvg3m1',
+        product_id: 'dm-zwbwey8pii',
         product_name: 'Samsung Galaxy A56 5G 256GB Dual Sim',
         product_price: 1297,
         currency: 'ZAR',
