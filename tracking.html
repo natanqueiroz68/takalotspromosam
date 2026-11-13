@@ -702,7 +702,11 @@
     <!-- TRACKING TITLE STRIP -->
     <div class="tracking-title-strip">
       <h1 class="tracking-heading">Tracking</h1>
-      <a href="index.html" class="view-all-orders-link">View All Orders</a>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <a href="track.html" class="view-all-orders-link" id="viewOrderDetailsLink">Order Details</a>
+        <span style="color:#d1d5db;">&bull;</span>
+        <a href="index.html" class="view-all-orders-link">View All Orders</a>
+      </div>
     </div>
 
     <!-- ORDER & ESTIMATED DELIVERY CARD -->
@@ -777,6 +781,14 @@
       <p class="warehouse-notice-text">
         Detailed tracking will become available once your parcel has shipped from our warehouse.
       </p>
+    </div>
+
+    <!-- VIEW FULL ORDER DETAILS BUTTON -->
+    <div style="text-align:center;padding:4px 16px 18px;background:#ffffff;">
+      <a href="track.html" class="need-help-link" id="viewOrderDetailsBtn" style="font-size:14.5px;font-weight:700;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        <span>View Full Order Details</span>
+      </a>
     </div>
 
     <!-- BANNER TAKEALOT NOW DELIVERED IN MINUTES -->
