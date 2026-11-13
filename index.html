@@ -60,13 +60,13 @@
   <meta property="og:title" content="Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) | takealot.com">
   <meta property="og:description" content="Black Friday Offer: Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) for R799 on takealot.com.">
   <meta property="og:type" content="product">
-  <meta property="og:image" content="images/galaxy-a56-main.png">
+  <meta property="og:image" content="images/galaxy-a56-01.jpg">
   <meta property="product:price:amount" content="799">
   <meta property="product:price:currency" content="ZAR">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) | takealot.com">
   <meta name="twitter:description" content="Black Friday Offer: Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) for R799 on takealot.com.">
-  <meta name="twitter:image" content="images/galaxy-a56-main.png">
+  <meta name="twitter:image" content="images/galaxy-a56-01.jpg">
 
   <!-- Schema.org Product Structured Data -->
   <script type="application/ld+json">
@@ -76,12 +76,18 @@
     "name": "Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)",
     "description": "Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import) - Awesome Graphite. 6.7-inch FHD+ Super AMOLED+ 120Hz display, Exynos 1580 Octa-Core processor, 50MP triple rear camera with OIS, 5,000 mAh battery with 45W fast charge, IP67 water/dust resistance.",
     "image": [
-      "images/galaxy-a56-main.png",
-      "images/galaxy-a56-graphite-main.png",
-      "images/galaxy-a56-lightgray.png",
-      "images/galaxy-a56-pink.png",
-      "images/galaxy-a56-ai-features.jpg",
-      "images/galaxy-a56-case.jpg"
+      "images/galaxy-a56-01.jpg",
+      "images/galaxy-a56-02.jpg",
+      "images/galaxy-a56-03.jpg",
+      "images/galaxy-a56-04.jpg",
+      "images/galaxy-a56-05.jpg",
+      "images/galaxy-a56-06.jpg",
+      "images/galaxy-a56-07.png",
+      "images/galaxy-a56-08.jpg",
+      "images/galaxy-a56-09.jpg",
+      "images/galaxy-a56-10.png",
+      "images/galaxy-a56-11.jpg",
+      "images/galaxy-a56-12.jpg"
     ],
     "brand": {
       "@type": "Brand",
@@ -372,19 +378,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 10px 0 0;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px 8px 0;
     }
     .dot{
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
       background: #cfcfcf;
       border: 0;
       padding: 0;
       cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
     }
-    .dot.is-active{ background: var(--blue); }
+    .dot.is-active{
+      background: var(--blue);
+      transform: scale(1.15);
+    }
 
     .info{
       padding: 10px 12px 0;
@@ -1780,7 +1791,7 @@
   <div class="wrap">
     <section class="hero" aria-label="Product hero">
       <div class="hero__imgbox">
-        <img id="productImage" class="hero__img" src="images/galaxy-a56-main.png" alt="Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)">
+        <img id="productImage" class="hero__img" src="images/galaxy-a56-01.jpg" alt="Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)">
 
         <div class="badge-off" aria-label="Black Friday Offer" style="width: auto; padding: 6px 10px; font-size: 11px; font-weight: 800; letter-spacing: 0.5px;">
           BLACK
@@ -1804,6 +1815,12 @@
         <button class="dot" data-index="3" aria-label="Image 4"></button>
         <button class="dot" data-index="4" aria-label="Image 5"></button>
         <button class="dot" data-index="5" aria-label="Image 6"></button>
+        <button class="dot" data-index="6" aria-label="Image 7"></button>
+        <button class="dot" data-index="7" aria-label="Image 8"></button>
+        <button class="dot" data-index="8" aria-label="Image 9"></button>
+        <button class="dot" data-index="9" aria-label="Image 10"></button>
+        <button class="dot" data-index="10" aria-label="Image 11"></button>
+        <button class="dot" data-index="11" aria-label="Image 12"></button>
       </div>
     </section>
 
@@ -2383,7 +2400,7 @@
 
   <div class="modal" id="modal">
     <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
-    <img id="modalImg" src="images/galaxy-a56-main.png" alt="Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)">
+    <img id="modalImg" src="images/galaxy-a56-01.jpg" alt="Samsung Galaxy A56 5G 256GB Dual Sim (Parallel Import)">
   </div>
 
 <div class="footer-banner">
@@ -2394,12 +2411,18 @@
   <script>
 
     const images = [
-      "images/galaxy-a56-main.png",
-      "images/galaxy-a56-graphite-main.png",
-      "images/galaxy-a56-lightgray.png",
-      "images/galaxy-a56-pink.png",
-      "images/galaxy-a56-ai-features.jpg",
-      "images/galaxy-a56-case.jpg"
+      "images/galaxy-a56-01.jpg",
+      "images/galaxy-a56-02.jpg",
+      "images/galaxy-a56-03.jpg",
+      "images/galaxy-a56-04.jpg",
+      "images/galaxy-a56-05.jpg",
+      "images/galaxy-a56-06.jpg",
+      "images/galaxy-a56-07.png",
+      "images/galaxy-a56-08.jpg",
+      "images/galaxy-a56-09.jpg",
+      "images/galaxy-a56-10.png",
+      "images/galaxy-a56-11.jpg",
+      "images/galaxy-a56-12.jpg"
     ];
 
 const productImage = document.getElementById("productImage");
